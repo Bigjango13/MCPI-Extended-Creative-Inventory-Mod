@@ -9,7 +9,7 @@ sudo mv libbci.so /opt/minecraft-pi-reborn-client/mods/libbci.so
 Then all you need to do is run minecraft: pi edition with the Expand Creative Inventory mod activated.
 If it still doesn't work you will have to run 
 ```bash
-sudo mv /opt/minecraft-pi-reborn-client/mods/libbci.so /opt/minecraft-pi-reborn-client/mods/creative.so
+sudo mv /usr/lib/minecraft-pi-reborn-client/mods/libbci.so /opt/minecraft-pi-reborn-client/mods/creative.so
 ```
 ## Compiling
 To compile your own version of it you will need the libreborn folder and the creative.cpp file, then once you finish editing creative.cpp, you run:
