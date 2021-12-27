@@ -4,7 +4,7 @@ This is a mod for minecraft: pi edition reborn that expands the creative invento
 To use this mod you will need to download the shared library and place it in the mods folder of minecraft: pi edition, to do this download libbci.so and run 
 ```bash
 wget https://github.com/bigjango13/MCPI-Better-Creative-Inventory-Mod/blob/main/libbci.so?raw=true
-sudo mv libbci.so /opt/minecraft-pi-reborn-client/mods/libbci.so 
+sudo mv libbci.so /usr/lib/minecraft-pi-reborn-client/mods/libbci.so 
 ``` 
 Then all you need to do is run minecraft: pi edition with the Expand Creative Inventory mod activated.
 If it still doesn't work you will have to run 
