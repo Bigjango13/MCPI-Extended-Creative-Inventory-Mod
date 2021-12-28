@@ -22,6 +22,8 @@ This will compile a version of libbci.so with your changes.
 ![More of the items that libbci adds](https://camo.githubusercontent.com/8641e07b67f6c7f3009fb5afca6d8d3a5d06c0020095c92541685ca27e9bfcd7/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f6174746163686d656e74732f3734333538303739373837323736373036362f3931303332383835383933373533363531322f323032312d31312d31365f31392e34312e31352e706e67)
 Image credit to [Red-exe-Engineer](https://github.com/Red-exe-Engineer)
 ### List:
+Here is a list of all 87 items that are added by this mod:
+
 Name: tallGrass, ID: 31
 
 Name: doubleStoneSlab, ID: 43
