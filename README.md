@@ -1,5 +1,5 @@
 # MCPI-Better-Creative-Inventory
-This is a mod for minecraft: pi edition reborn that expands the creative inventory so that you have access to all items.
+This is a mod for [Minecraft: Pi Edition Reborn](https://gitea.thebrokenrail.com/TheBrokenRail/minecraft-pi-reborn) that expands the creative inventory so that you have access to all items.
 ## Using
 To use this mod you will need to download the shared library and place it in the mods folder of minecraft: pi edition, to do this download libbci.so and run 
 ```bash
