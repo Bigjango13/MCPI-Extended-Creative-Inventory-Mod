@@ -4,19 +4,18 @@ This is a mod for [Minecraft: Pi Edition Reborn](https://gitea.thebrokenrail.com
 To use this mod you will need to download the shared library and place it in the mods folder of minecraft: pi edition, to do this download libbci.so and run 
 ```bash
 wget https://github.com/bigjango13/MCPI-Better-Creative-Inventory-Mod/releases/download/v1.0.0/libbci.so
-sudo mv libbci.so /usr/lib/minecraft-pi-reborn-client/mods/libbci.so 
+mkdir -p ~/.minecraft-pi/mods
+sudo mv libbci.so ~/.minecraft-pi/modslibbci.so 
 ``` 
 Then all you need to do is run minecraft: pi edition with the Expand Creative Inventory mod activated.
-If it still doesn't work you will have to run 
-```bash
-sudo mv /usr/lib/minecraft-pi-reborn-client/mods/libbci.so /usr/lib/minecraft-pi-reborn-client/mods/creative.so
-```
+
 ## Compiling
 To compile your own version of it you will need the libreborn folder and the creative.cpp file, then once you finish editing creative.cpp, you run:
 ```bash
-arm-linux-gnueabihf-g++ -shared -o libbci.so creative.cpp -DREBORN_HAS_COMPILED_CODE
+arm-linux-gnueabihf-g++ -shared -DREBORN_HAS_COMPILED_CODE -o libbci.so creative.cpp
 ``` 
 This will compile a version of libbci.so with your changes.
+
 ## Items Added
 ![Some of the items that libbci adds](https://camo.githubusercontent.com/fb511e85018e2ecb51013423a0ef12ab5a9a602b6915f166a1a994b75c6cf1c7/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f6174746163686d656e74732f3734333538303739373837323736373036362f3931303332383834323033303238343830302f323032312d31312d31365f31392e34312e31302e706e67)
 ![More of the items that libbci adds](https://camo.githubusercontent.com/8641e07b67f6c7f3009fb5afca6d8d3a5d06c0020095c92541685ca27e9bfcd7/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f6174746163686d656e74732f3734333538303739373837323736373036362f3931303332383835383933373533363531322f323032312d31312d31365f31392e34312e31352e706e67)
