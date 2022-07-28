@@ -1,33 +1,50 @@
-# MCPI-Better-Extended-Inventory
-This is a mod for [Minecraft: Pi Edition Reborn](https://gitea.thebrokenrail.com/TheBrokenRail/minecraft-pi-reborn) that expands the creative inventory so that you have access to all items.
+# MCPI Extended Inventory
+
+This is a mod for [Minecraft: Pi Edition Reborn](https://gitea.thebrokenrail.com/TheBrokenRail/minecraft-pi-reborn) that expands the creative inventory so that you have access to all items. It also patches all (but one) invaild items so that they don't make your game crash.
+
 ## Using
 To use this mod you will need to download the shared library and place it in the mods folder of minecraft: pi edition, to do this download libbci.so and run 
 ```bash
-wget https://github.com/bigjango13/MCPI-Extended-Creative-Inventory-Mod/releases/download/v1.0.0/libbci.so
+wget https://github.com/Bigjango13/MCPI-Extended-Creative-Inventory-Mod/releases/download/v1.1.0/libexpanded-creative.so
 mkdir -p ~/.minecraft-pi/mods
-sudo mv libbci.so ~/.minecraft-pi/modslibbci.so 
+mv libexpanded-creative.so ~/.minecraft-pi/mods/libexpanded-creative.so
 ``` 
-Then all you need to do is run minecraft: pi edition with the Expand Creative Inventory mod activated.
+Then all you need to do is run MCPI-Reborn with the Expand Creative Inventory feature activated.
 
 ## Compiling
-To compile your own version of it you will need the libreborn folder and the creative.cpp file, then once you finish editing creative.cpp, you run:
-```bash
-arm-linux-gnueabihf-g++ -shared -DREBORN_HAS_COMPILED_CODE -o libbci.so creative.cpp
-``` 
-This will compile a version of libbci.so with your changes.
+To compile just run `./build`.
 
-## Items Added
-![Some of the items that libbci adds](https://camo.githubusercontent.com/fb511e85018e2ecb51013423a0ef12ab5a9a602b6915f166a1a994b75c6cf1c7/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f6174746163686d656e74732f3734333538303739373837323736373036362f3931303332383834323033303238343830302f323032312d31312d31365f31392e34312e31302e706e67)
-![More of the items that libbci adds](https://camo.githubusercontent.com/8641e07b67f6c7f3009fb5afca6d8d3a5d06c0020095c92541685ca27e9bfcd7/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f6174746163686d656e74732f3734333538303739373837323736373036362f3931303332383835383933373533363531322f323032312d31312d31365f31392e34312e31352e706e67)
+# Screenshots
+
+Items Added
+![Some of the items that libexpanded-creative adds](https://camo.githubusercontent.com/fb511e85018e2ecb51013423a0ef12ab5a9a602b6915f166a1a994b75c6cf1c7/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f6174746163686d656e74732f3734333538303739373837323736373036362f3931303332383834323033303238343830302f323032312d31312d31365f31392e34312e31302e706e67)
+![More of the items that libexpanded-creative adds](https://camo.githubusercontent.com/8641e07b67f6c7f3009fb5afca6d8d3a5d06c0020095c92541685ca27e9bfcd7/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f6174746163686d656e74732f3734333538303739373837323736373036362f3931303332383835383933373533363531322f323032312d31312d31365f31392e34312e31352e706e67)
 Image credit to [Red-exe-Engineer](https://github.com/Red-exe-Engineer)
+
 ### List:
-Here is a list of all 87 items that are added by this mod:
+Here is a list of all 92 items that are added by this mod:
 
-Name: tallGrass, ID: 31
-
-Name: doubleStoneSlab, ID: 43
+Name: bed, ID: 26
 
 Name: fire, ID: 51
+
+Name: sign, ID: 63
+
+Name: door, ID: 64
+
+Name: ironDoor, ID: 71
+
+Name: trapdoor, ID: 96
+
+Name: mushroomStew, ID: 282
+
+Name: steak, ID: 364
+
+Name: cookedChicken, ID: 366
+
+Name: porkCooked, ID: 320
+
+Name: apple, ID: 260
 
 Name: crops, ID: 59
 
@@ -35,21 +52,15 @@ Name: farmland, ID: 60
 
 Name: activeFurnace, ID: 62
 
+Name: iron_door, ID: 330
+
 Name: activeRedstoneOre, ID: 74
 
 Name: pumkinStem, ID: 105
 
 Name: newGrass, ID: 253
 
-Name: reserved6, ID: 255
-
-Name: shovelIron, ID: 256
-
-Name: ironPick, ID: 257
-
-Name: ironAxe, ID: 258
-
-Name: apple, ID: 260
+Name: doubleStoneSlab, ID: 43
 
 Name: arrow, ID: 262
 
@@ -76,6 +87,12 @@ Name: stoneShovel, ID: 273
 Name: stonePickaxe, ID: 274
 
 Name: stoneAxe, ID: 275
+
+Name: shovelIron, ID: 256
+
+Name: ironPick, ID: 257
+
+Name: ironAxe, ID: 258
 
 Name: diamondSword, ID: 276
 
@@ -119,6 +136,14 @@ Name: wheat, ID: 296
 
 Name: bread, ID: 297
 
+Name: diamondHelm, ID: 310
+
+Name: diamondChest, ID: 311
+
+Name: diamondLeg, ID: 312
+
+Name: diamondBoot, ID: 313
+
 Name: leatherCap, ID: 298
 
 Name: leatherShirt, ID: 299
@@ -135,22 +160,6 @@ Name: chainLegs, ID: 304
 
 Name: chainBoots, ID: 305
 
-Name: ironHelm, ID: 306
-
-Name: ironChest, ID: 307
-
-Name: ironLegs, ID: 308
-
-Name: ironBoots, ID: 309
-
-Name: diamondHelm, ID: 310
-
-Name: diamondChest, ID: 311
-
-Name: diamondLegs, ID: 312
-
-Name: diamondBoots, ID: 313
-
 Name: goldHelm, ID: 314
 
 Name: goldChest, ID: 315
@@ -159,13 +168,17 @@ Name: goldLegs, ID: 316
 
 Name: goldBoots, ID: 317
 
+Name: ironHelm, ID: 306
+
+Name: ironChest, ID: 307
+
+Name: ironLegs, ID: 308
+
+Name: ironBoots, ID: 309
+
 Name: flint2, ID: 318
 
 Name: porkRaw, ID: 319
-
-Name: porkCooked, ID: 320
-
-Name: ironDoor, ID: 330
 
 Name: leather, ID: 334
 
@@ -173,7 +186,7 @@ Name: clayBrick, ID: 336
 
 Name: clay, ID: 337
 
-Name: notepad, ID: 339
+Name: paper, ID: 339
 
 Name: book, ID: 340
 
@@ -194,5 +207,3 @@ Name: melon, ID: 360
 Name: beefRaw, ID: 363
 
 Name: chickenRaw, ID: 365
-
-Name: cookedChicken, ID: 366
