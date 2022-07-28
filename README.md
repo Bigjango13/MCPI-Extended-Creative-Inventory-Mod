@@ -12,7 +12,7 @@ mv libexpanded-creative.so ~/.minecraft-pi/mods/libexpanded-creative.so
 Then all you need to do is run MCPI-Reborn with the Expand Creative Inventory feature activated.
 
 ## Compiling
-To compile just run `./build`.
+To compile just run `./build.sh`.
 
 # Screenshots
 
