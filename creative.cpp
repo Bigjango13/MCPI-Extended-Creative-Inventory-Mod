@@ -129,10 +129,27 @@ static void Item_initItems_injection(__attribute__((unused)) unsigned char *obj)
     }
 }
 
+int printf_injection(const char *format, ... ){
+    return 0;
+}
+
 // Init
 __attribute__((constructor)) static void init() {
     // Makes the function run every time the creative inventory is set up
     misc_run_on_creative_inventory_setup(Inventory_setupDefault_FillingContainer_addItem_call_injection);
     // Makes the function run after items setup.
     misc_run_on_items_setup(Item_initItems_injection);
+    // Now to remove the annoying messages
+    // "Item conflict id @ %d! Id already used\n"
+    overwrite_calls(extract_from_bl_instruction((unsigned char*) 0x93694), (void*) printf_injection);
+    overwrite_calls(extract_from_bl_instruction((unsigned char*) 0x93ff8), (void*) printf_injection);
+    overwrite_calls(extract_from_bl_instruction((unsigned char*) 0x994e8), (void*) printf_injection);
+    overwrite_calls(extract_from_bl_instruction((unsigned char*) 0x9a438), (void*) printf_injection);
+    overwrite_calls(extract_from_bl_instruction((unsigned char*) 0x9a67c), (void*) printf_injection);
+    overwrite_calls(extract_from_bl_instruction((unsigned char*) 0x9ae40), (void*) printf_injection);
+    overwrite_calls(extract_from_bl_instruction((unsigned char*) 0x9b0f0), (void*) printf_injection);
+    overwrite_calls(extract_from_bl_instruction((unsigned char*) 0xce404), (void*) printf_injection);
+    // "Slot %d is already occupied by %p when adding %p\n"
+    overwrite_calls(extract_from_bl_instruction((unsigned char*) 0xc3374), (void*) printf_injection);
+    overwrite_calls(extract_from_bl_instruction((unsigned char*) 0xc3440), (void*) printf_injection);
 }
